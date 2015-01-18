@@ -48,6 +48,9 @@ Plugin 'hsanson/vim-android'
 Plugin 'vim-scripts/javacomplete'
 "java completion"
 
+Bundle 'https://github.com/neilagabriel/vim-geeknote'
+"evernote"
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,7 +71,8 @@ set hidden
 set copyindent
 " Vim can set the title of the terminal window
 set title
-
+" autochdir helps for filename completion"j
+set autochdir
 "markdown settings"
 let g:vim_markdown_frontmatter=1
 
@@ -82,13 +86,22 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive' }
-
 " CtrlP
-nnoremap <silent> t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
+
+
+"evernote setting"
+let g:GeeknoteFormat="markdown"
+autocmd FileType geeknote setlocal nonumber
+
+"you completeme settings"
+let g:ycm_confirm_extra_conf = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+set tags+=./.tags
 
 "markdown file settings"
 autocmd BufRead,BufNewFile *.md set filetype=markdown
