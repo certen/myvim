@@ -43,8 +43,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 "snippets"
 Plugin 'Raimondi/delimitMate'
-Plugin 'hsanson/vim-android'
-"android development"
 Plugin 'vim-scripts/javacomplete'
 "java completion"
 
