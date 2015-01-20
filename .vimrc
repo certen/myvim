@@ -19,6 +19,7 @@ Plugin 'plasticboy/vim-markdown'
 "tabular and markdown needed for markdown editing"
 Plugin 'scrooloose/NERDTree'
 Plugin 'scrooloose/NERDCommenter'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/syntastic'
 "improvements on the window for syntax check"
 Plugin 'kien/ctrlp.vim'
@@ -84,10 +85,21 @@ let g:ctrlp_max_depth = 5
 "simplenote
 let g:SimplenoteUsername = "USERNAME"
 let g:SimplenotePassword = "PASSWORD"
-"syntastic settings"
+""
+"" Syntastic
+""
+" You can see syntastic's idea of available checkers by running :SyntasticInfo
+" " See wiki for supported checkers:
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+" " https://github.com/scrooloose/syntastic/wiki/Syntax-Checkers
+"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -130,9 +142,24 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 "
 " " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
+"Disable arrows and replace with resize window
+nnoremap <left> :vertical resize +5<cr> 
+nnoremap <right> :vertical resize -5<cr>
+nnoremap <up> :resize +5<cr>
+nnoremap <down> :resize -5<cr>
 "buffer management with tab
 " Switch to alternate file
 map <C-Tab> :bnext<cr>
 map <C-S-Tab> :bprevious<cr>
+" Auto close vim if nerdtree last buffer left
+autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
+function! s:CloseIfOnlyNerdTreeLeft()
+	  if exists("t:NERDTreeBufName")
+	  	      if bufwinnr(t:NERDTreeBufName) != -1
+	  	      	            if winnr("$") == 1
+	  	      	            	            q
+	  	      	            	                  endif
+	  	      	            	                      endif
+	  	      	            	                        endif
+							endfunction
 autocmd VimEnter * NERDTree
