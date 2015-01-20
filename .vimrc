@@ -8,8 +8,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
+Plugin 'gmarik/vundle'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -45,10 +44,14 @@ Plugin 'honza/vim-snippets'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/javacomplete'
 "java completion"
+Plugin 'mrtazz/simplenote.vim'
+"simple note
+Plugin 'maxbrunsfeld/vim-yankstack'
+"A lightweight implementation of emacs's kill-ring for vim"
 
-Bundle 'https://github.com/neilagabriel/vim-geeknote'
-"evernote"
-
+"
+"
+"
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -73,7 +76,14 @@ set title
 set autochdir
 "markdown settings"
 let g:vim_markdown_frontmatter=1
-
+"ctrl p map file search
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 600
+let g:ctrlp_max_depth = 5
+"simplenote
+let g:SimplenoteUsername = "USERNAME"
+let g:SimplenotePassword = "PASSWORD"
 "syntastic settings"
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -90,10 +100,6 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
 
-
-"evernote setting"
-let g:GeeknoteFormat="markdown"
-autocmd FileType geeknote setlocal nonumber
 
 "you completeme settings"
 let g:ycm_confirm_extra_conf = 0
@@ -125,4 +131,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+"buffer management with tab
+" Switch to alternate file
+map <C-Tab> :bnext<cr>
+map <C-S-Tab> :bprevious<cr>
 autocmd VimEnter * NERDTree
