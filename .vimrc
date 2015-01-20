@@ -149,8 +149,11 @@ nnoremap <up> :resize +5<cr>
 nnoremap <down> :resize -5<cr>
 "buffer management with tab
 " Switch to alternate file
-map <C-Tab> :bnext<cr>
-map <C-S-Tab> :bprevious<cr>
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+map <C-L> :tabn<CR>
+map <C-H> :tabp<CR>
+
 " Auto close vim if nerdtree last buffer left
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 function! s:CloseIfOnlyNerdTreeLeft()
