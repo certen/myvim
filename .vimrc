@@ -82,9 +82,6 @@ let g:ctrlp_working_path_mode = 2
 let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 600
 let g:ctrlp_max_depth = 5
-"simplenote
-let g:SimplenoteUsername = "USERNAME"
-let g:SimplenotePassword = "PASSWORD"
 ""
 "" Syntastic
 ""
@@ -153,6 +150,11 @@ map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
+
+" Local config
+ if filereadable($HOME . "/.vimrc.local")
+   source ~/.vimrc.local
+endif
 
 " Auto close vim if nerdtree last buffer left
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
