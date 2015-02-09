@@ -35,10 +35,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 "Js beautify"
-Plugin 'Valloric/YouCompleteMe'
-"auto complete"
 Bundle 'Valloric/ListToggle'
-Plugin 'SirVer/ultisnips' 
 "snippet engine"
 Plugin 'honza/vim-snippets'
 "snippets"
