@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
+filetype plugin on
+runtime macros/matchit.vim
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
@@ -43,6 +44,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/javacomplete'
 "java completion"
 Plugin 'mrtazz/simplenote.vim'
+Plugin 'tpope/vim-surround'
 "simple note
 Plugin 'maxbrunsfeld/vim-yankstack'
 "A lightweight implementation of emacs's kill-ring for vim"
@@ -60,6 +62,7 @@ set nu
 set autoindent
 set vb
 syntax on
+
 set nobackup      "no backup files
 "set nowritebackup  #only in case you don't want a backup file while editing
 set noswapfile     "no swap files
