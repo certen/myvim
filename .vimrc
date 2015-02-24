@@ -43,7 +43,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'Raimondi/delimitMate'
 Plugin 'vim-scripts/javacomplete'
 "java completion"
-Plugin 'mrtazz/simplenote.vim'
 Plugin 'tpope/vim-surround'
 "simple note
 Plugin 'maxbrunsfeld/vim-yankstack'
