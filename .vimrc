@@ -24,6 +24,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/syntastic'
 "improvements on the window for syntax check"
 Plugin 'kien/ctrlp.vim'
+Plugin 'Keithbsmiley/swift.vim'
+"adds swift syntax support"
 "fuzzy search"
 Plugin 'bling/vim-airline'
 "light status bar"
@@ -47,7 +49,6 @@ Plugin 'tpope/vim-surround'
 "simple note
 Plugin 'maxbrunsfeld/vim-yankstack'
 "A lightweight implementation of emacs's kill-ring for vim"
-
 "
 "
 "
@@ -128,8 +129,7 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-
+autocmd BufNewFile,BufRead *.swift setfiletype swift
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
