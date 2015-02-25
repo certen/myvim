@@ -5,6 +5,7 @@ runtime macros/matchit.vim
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
+set hlsearch
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
@@ -49,6 +50,7 @@ Plugin 'tpope/vim-surround'
 "simple note
 Plugin 'maxbrunsfeld/vim-yankstack'
 "A lightweight implementation of emacs's kill-ring for vim"
+Plugin 'edsono/vim-matchit'
 "
 "
 "
