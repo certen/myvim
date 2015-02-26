@@ -52,7 +52,7 @@ Plugin 'maxbrunsfeld/vim-yankstack'
 "A lightweight implementation of emacs's kill-ring for vim"
 Plugin 'edsono/vim-matchit'
 "
-"
+colorscheme darcula 
 "
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
