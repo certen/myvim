@@ -1,5 +1,4 @@
-cp .vimrc ~/.vimrc
-cp .gvimrc ~/.gvimrc
+cp ./.* ~/
 DIRECTORY=~/.vim/colors/
 if [ ! -d "$DIRECTORY" ]; then
   mkdir $DIRECTORY 
