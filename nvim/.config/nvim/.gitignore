@@ -1,0 +1,9 @@
+tt.*
+lazy-lock.json
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
