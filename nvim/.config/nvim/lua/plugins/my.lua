@@ -15,6 +15,7 @@ return {
     },
   },
   --  { "akinsho/toggleterm.nvim", version = "*", opts = {  shell = vim.o.shell,} },
+  { "aserowy/tmux.nvim" },
   { "folke/tokyonight.nvim" },
   { "folke/twilight.nvim" },
   {
