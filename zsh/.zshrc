@@ -124,7 +124,8 @@ export NVM_DIR="$HOME/.nvm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/env.sh
-export PATH="$HOME/.local/bin/:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/anaconda3/bin/:$HOME/.local/bin/:$HOME/.cargo/bin:$PATH"
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   tmux a -t default || exec tmux new -s default && exit;
 fi
+nvm use 21.7

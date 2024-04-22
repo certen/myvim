@@ -31,7 +31,7 @@ return {
         enabled = true,
       },
       codelens = {
-        enabled = true,
+        enabled = false,
       },
     },
   },
