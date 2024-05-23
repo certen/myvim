@@ -125,6 +125,7 @@ export NVM_DIR="$HOME/.nvm"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/env.sh
 export PATH="$HOME/anaconda3/bin/:$HOME/.local/bin/:$HOME/.cargo/bin:$PATH"
+export PATH=/usr/local/cuda/bin:${PATH}
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   tmux a -t default || exec tmux new -s default && exit;
 fi
