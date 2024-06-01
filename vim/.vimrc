@@ -8,7 +8,9 @@ call vundle#begin()
 set hlsearch
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"  :PluginInstall"
+" "
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 " The following are examples of different formats supported.

@@ -1,9 +1,8 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.coding.copilot",
     "lazyvim.plugins.extras.coding.native_snippets",
-    "lazyvim.plugins.extras.dap.core",
-    "lazyvim.plugins.extras.editor.aerial",
     "lazyvim.plugins.extras.editor.harpoon2",
     "lazyvim.plugins.extras.editor.mini-move",
     "lazyvim.plugins.extras.formatting.prettier",
@@ -20,10 +19,11 @@
     "lazyvim.plugins.extras.util.gitui",
     "lazyvim.plugins.extras.util.mini-hipatterns",
     "lazyvim.plugins.extras.util.project",
-    "lazyvim.plugins.extras.vscode"
+    "lazyvim.plugins.extras.vscode",
+    "lazyvim.plugins.extras.editor.aerial"
   ],
   "news": {
-    "NEWS.md": "3314"
+    "NEWS.md": "4964"
   },
-  "version": 3
+  "version": 6
 }
